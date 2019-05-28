@@ -15,7 +15,7 @@ const nodeClient = getConn('Node');
 const infoOs = `${platform()} ${release()} ${hostname()}`
 nodeClient.write(JSON.stringify({ type: 'IDENT', data: infoOs }));
 setTimeout(() => {
-  nodeClient.write(JSON.stringify({ type: 'SEND', from: 'todos', data: 'olá' }));
+  nodeClient.write(JSON.stringify({ type: 'SEND', from: 'todos', data: 'hello vue electron' }));
 }, 3e3)
 
 /* Vue.use(new VueSocketIO({
